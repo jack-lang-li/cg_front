@@ -2,6 +2,8 @@
 
 始终在 `frontend-learning-lab` 内练习。每次选择一行任务，先读实际代码，再由学员按局部方案修改、运行并验收。表中路径以项目根目录为起点。未来文件名是定位建议，开始该任务时按当时的项目结构核对。验收确认后只更新对应任务和 [进度记录](progress.md)。
 
+人工实施说明写明文件、定位用的现有代码、插入或替换的位置、关键语句的作用，以及每一步保存后如何在页面或开发者工具中检查。
+
 ## 0 · 前端工程初始化
 
 | 编号 | 知识点 | 实操目标 | 涉及文件 | 预期效果 | 验收标准 | 状态 |
@@ -31,17 +33,17 @@
 
 | 编号 | 知识点 | 实操目标 | 涉及文件 | 预期效果 | 验收标准 | 状态 |
 | --- | --- | --- | --- | --- | --- | --- |
-| 2-01 | 选择器、class、id、`scoped`、`background` | 给设备区设置局部容器样式 | `src/views/demo/CustomPage.vue` 的 `<style scoped>` | 设备区形成清晰内容边界 | 用 Elements 找到生效规则，实验室标题样式保持原效果 | 学习中 |
-| 2-02 | 盒模型、宽高、`margin`、`padding`、`border` | 调整输入框尺寸和设备区内外间距 | `src/views/demo/CustomPage.vue` | 控件高度与间距统一 | 在 Computed 面板指出内容、内边距、边框和外边距 | 未开始 |
-| 2-03 | `display`、Flex、`gap`、`flex-wrap` | 横向排列查询条件与按钮 | `src/views/demo/CustomPage.vue` | 宽屏同排，变窄时可换行 | 缩窄视口，按钮仍可点击，表单没有横向溢出 | 未开始 |
-| 2-04 | 表格样式、`overflow-x` | 设置表头和单元格样式，并处理窄屏 | `src/views/demo/CustomPage.vue` | 表格横向滚动限制在容器内 | 在 360 像素视口能滚到最后一列 | 未开始 |
-| 2-05 | CSS Grid、响应式列布局 | 用 Grid 排列标签和控件 | `src/views/demo/CustomPage.vue` | 查询字段对齐，小屏变为单列 | 调整视口验证列数和可读性，解释 Flex 与 Grid 在页面里的用途 | 未开始 |
+| 2-01 | 选择器、class、id、`scoped`、`background` | 给设备区设置局部容器样式 | `src/views/demo/CustomPage.vue` 的 `<style scoped>` | 设备区形成清晰内容边界 | 用 Elements 找到生效规则，实验室标题样式保持原效果 | 已完成 |
+| 2-02 | 盒模型、宽高、`margin`、`padding`、`border` | 调整输入框尺寸和设备区内外间距 | `src/views/demo/CustomPage.vue` | 控件高度与间距统一 | 在 Computed 面板指出内容、内边距、边框和外边距 | 已完成 |
+| 2-03 | `display`、Flex、`gap`、`flex-wrap` | 横向排列查询条件与按钮 | `src/views/demo/CustomPage.vue` | 宽屏同排，变窄时可换行 | 缩窄视口，按钮仍可点击，表单没有横向溢出 | 已完成 |
+| 2-04 | 表格样式、`overflow-x` | 设置表头和单元格样式，并处理窄屏 | `src/views/demo/CustomPage.vue` | 表格横向滚动限制在容器内 | 在 360 像素视口能滚到最后一列 | 已完成 |
+| 2-05 | CSS Grid、响应式列布局 | 用 Grid 排列标签和控件 | `src/views/demo/CustomPage.vue` | 查询字段对齐，小屏变为单列 | 调整视口验证列数和可读性，解释 Flex 与 Grid 在页面里的用途 | 待验证 |
 
 ## 3 · JavaScript 基础
 
 | 编号 | 知识点 | 实操目标 | 涉及文件 | 预期效果 | 验收标准 | 状态 |
 | --- | --- | --- | --- | --- | --- | --- |
-| 3-01 | `let`、`const`、基本类型、对象、数组、`import/export` | 用模拟数组表达静态设备记录并从模块导入 | `src/views/demo/device-data.js`、`src/views/demo/CustomPage.vue` | 记录有名称、状态和唯一编号 | 在断点读出字段和值，能类比 Java DTO 和 List | 未开始 |
+| 3-01 | `let`、`const`、基本类型、对象、数组、`import/export` | 用模拟数组表达静态设备记录并从模块导入 | `src/views/demo/device-data.js`、`src/views/demo/CustomPage.vue` | 记录有名称、状态和唯一编号 | 在断点读出字段和值，能类比 Java DTO 和 List | 学习中 |
 | 3-02 | 函数、箭头函数、作用域、`filter`、`some` | 编写关键词和状态查询函数 | `src/views/demo/device-query.js`、`device-data.js` | 按组合条件得到匹配集合 | 验证空条件、组合条件和无匹配，并比较原数组长度 | 未开始 |
 | 3-03 | `map`、`find`、`forEach` | 写设备名称列表、按编号查找和状态统计 | `src/views/demo/device-query.js` | 从同一批记录获得三种结果 | 用固定样本核对统计、缺失编号和名称顺序 | 未开始 |
 | 3-04 | 解构、展开、对象与数组引用、JSON 序列化 | 重置普通查询模型，观察浅复制与 JSON 往返 | `src/views/demo/device-query.js`、`CustomPage.vue` | 重置后默认查询参数恢复 | 通过断点解释对象别名、浅复制和嵌套共享的结果 | 未开始 |

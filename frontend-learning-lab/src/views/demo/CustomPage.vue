@@ -6,12 +6,10 @@
     <div class="device-section">
       <h2>设备管理</h2>
       <p>示例设备为<span>一号巡检泵</span>。</p>
-      <form @submit.prevent>
-        <div>
+      <form class="device-filter" @submit.prevent>
+        <div class="filter-fields">
           <label for="device-name">设备名称</label>
           <input id="device-name" type="text" placeholder="请输入设备名称" />
-        </div>
-        <div>
           <label for="device-status">设备状态</label>
           <select id="device-status">
             <option value="">全部状态</option>
@@ -19,30 +17,35 @@
             <option value="stopped">已停用</option>
           </select>
         </div>
-        <button type="submit">查询</button>
-        <button type="reset">重置</button>
+        <div class="filter-actions">
+          <button type="submit">查询</button>
+          <button type="reset">重置</button>
+        </div>
       </form>
-      <table>
-        <thead>
-          <tr>
-            <th scope="col">设备编号</th>
-            <th scope="col">设备名称</th>
-            <th scope="col">设备状态</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>EQ-001</td>
-            <td>一号巡检泵</td>
-            <td>运行中</td>
-          </tr>
-          <tr>
-            <td>EQ-002</td>
-            <td>二号巡检泵</td>
-            <td>已停用</td>
-          </tr>
-        </tbody>
-      </table>
+
+      <div class="device-table-scroll">
+        <table>
+          <thead>
+            <tr>
+              <th scope="col">设备编号</th>
+              <th scope="col">设备名称</th>
+              <th scope="col">设备状态</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>EQ-001</td>
+              <td>一号巡检泵</td>
+              <td>运行中</td>
+            </tr>
+            <tr>
+              <td>EQ-002</td>
+              <td>二号巡检泵</td>
+              <td>已停用</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
     </div>
     <p class="practice-count" aria-live="polite">
       练习计数：{{ practiceCount }}
@@ -87,6 +90,72 @@ h1 {
 .intro {
   margin: 0.75rem 0 0;
   color: #42576d;
+}
+
+.device-section {
+  background-color: #e6eef8;
+  margin-top: 16px;
+  padding: 16px;
+  border: 1px solid #a9bcd2;
+}
+
+.device-filter {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+}
+
+.filter-fields {
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  align-items: center;
+  gap: 8px;
+}
+
+@media (max-width: 480px) {
+  .filter-fields {
+    width: 100%;
+    grid-template-columns: 1fr;
+  }
+}
+
+.filter-actions {
+  display: flex;
+  gap: 8px;
+}
+
+#device-name,
+#device-status {
+  box-sizing: border-box;
+  width: 120px;
+  max-width: 100%;
+  height: 36px;
+  padding: 0 8px;
+  border: 1px solid #8298b0;
+}
+
+.device-table-scroll {
+  margin-top: 16px;
+  overflow-x: auto;
+}
+
+.device-table-scroll table {
+  width: 100%;
+  min-width: 420px;
+  border-collapse: collapse;
+  background-color: #fff;
+}
+
+.device-table-scroll th,
+.device-table-scroll td {
+  padding: 8px 12px;
+  border-bottom: 1px solid #d2deec;
+  text-align: left;
+}
+
+.device-table-scroll th {
+  background-color: #dce8f5;
 }
 
 .practice-count {
