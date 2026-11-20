@@ -1,0 +1,29 @@
+{
+  "name": "frontend-learning-lab",
+  "version": "0.1.0",
+  "private": true,
+  "description": "面向 Java 后端开发者的 Vue 3 与 Webpack 5 学习工程",
+  "engines": {
+    "node": ">=24 <25",
+    "npm": ">=11 <12"
+  },
+  "scripts": {
+    "serve": "webpack serve --config vue.config.js --mode development",
+    "build": "webpack --config vue.config.js --mode production"
+  },
+  "dependencies": {
+    "vue": "3.5.45",
+    "vue-router": "4.5.1",
+    "vuex": "4.1.0"
+  },
+  "devDependencies": {
+    "@vue/compiler-sfc": "3.5.45",
+    "css-loader": "7.1.2",
+    "html-webpack-plugin": "5.6.4",
+    "style-loader": "4.0.0",
+    "vue-loader": "17.4.0",
+    "webpack": "5.106.0",
+    "webpack-cli": "5.1.4",
+    "webpack-dev-server": "5.2.7"
+  }
+}
