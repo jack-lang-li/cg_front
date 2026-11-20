@@ -5,7 +5,12 @@
     <p class="intro">以设备缺陷管理为练习场景，逐步学习企业后台页面开发。</p>
     <div class="device-section">
       <h2>设备管理</h2>
-      <p>示例设备为<span>一号巡检泵</span>。</p>
+      <p>
+        共有 {{ devices.length }} 条示例记录，第一条为<span>{{
+          firstDevice.name
+        }}</span
+        >。
+      </p>
       <form class="device-filter" @submit.prevent>
         <div class="filter-fields">
           <label for="device-name">设备名称</label>
@@ -57,7 +62,9 @@
 <script setup>
 import { computed } from 'vue';
 import { useStore } from 'vuex';
+import { devices } from './device-data.js';
 
+const firstDevice = devices[0];
 const store = useStore();
 const practiceCount = computed(() => store.state.practiceCount);
 

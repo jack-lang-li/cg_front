@@ -43,18 +43,18 @@
 
 | 编号 | 知识点 | 实操目标 | 涉及文件 | 预期效果 | 验收标准 | 状态 |
 | --- | --- | --- | --- | --- | --- | --- |
-| 3-01 | `let`、`const`、基本类型、对象、数组、`import/export` | 用模拟数组表达静态设备记录并从模块导入 | `src/views/demo/device-data.js`、`src/views/demo/CustomPage.vue` | 记录有名称、状态和唯一编号 | 在断点读出字段和值，能类比 Java DTO 和 List | 学习中 |
-| 3-02 | 函数、箭头函数、作用域、`filter`、`some` | 编写关键词和状态查询函数 | `src/views/demo/device-query.js`、`device-data.js` | 按组合条件得到匹配集合 | 验证空条件、组合条件和无匹配，并比较原数组长度 | 未开始 |
-| 3-03 | `map`、`find`、`forEach` | 写设备名称列表、按编号查找和状态统计 | `src/views/demo/device-query.js` | 从同一批记录获得三种结果 | 用固定样本核对统计、缺失编号和名称顺序 | 未开始 |
-| 3-04 | 解构、展开、对象与数组引用、JSON 序列化 | 重置普通查询模型，观察浅复制与 JSON 往返 | `src/views/demo/device-query.js`、`CustomPage.vue` | 重置后默认查询参数恢复 | 通过断点解释对象别名、浅复制和嵌套共享的结果 | 未开始 |
-| 3-05 | DOM、事件、事件对象和默认行为 | 在 Console 观察表单元素与原生事件 | `src/views/demo/CustomPage.vue`、浏览器 Elements/Console | 能定位元素和事件目标 | 用 F12 观察表单值与点击目标，说明原生重置发生在哪里 | 未开始 |
-| 3-06 | Promise、`async/await`、`try/catch/finally` | 把一次模拟查询改为延迟返回并观察异常路径 | `src/views/demo/device-query.js` | 模拟成功和失败都能观察到调用顺序 | 错误能进入 `catch`，两条路径都执行 `finally` | 未开始 |
+| 3-01 | `let`、`const`、基本类型、对象、数组、`import/export` | 用模拟数组表达静态设备记录并从模块导入 | `src/views/demo/device-data.js`、`src/views/demo/CustomPage.vue` | 记录有名称、状态和唯一编号 | 在断点读出字段和值，能类比 Java DTO 和 List | 已完成 |
+| 3-02 | 函数、箭头函数、作用域、`filter`、`some` | 编写关键词和状态查询函数 | `src/views/demo/device-query.js`、`device-data.js` | 按组合条件得到匹配集合 | 验证空条件、组合条件和无匹配，并比较原数组长度 | 已完成 |
+| 3-03 | `map`、`find`、`forEach` | 写设备名称列表、按编号查找和状态统计 | `src/views/demo/device-query.js` | 从同一批记录获得三种结果 | 用固定样本核对统计、缺失编号和名称顺序 | 已完成 |
+| 3-04 | 解构、展开、对象与数组引用、JSON 序列化 | 重置普通查询模型，观察浅复制与 JSON 往返 | `src/views/demo/device-query.js`、`CustomPage.vue` | 重置后默认查询参数恢复 | 在 Node 交互终端复现对象别名、浅复制与数组元素共享 | 待验证 |
+| 3-05 | DOM、事件、事件对象和默认行为 | 在 Console 观察表单元素与原生事件 | `src/views/demo/CustomPage.vue`、浏览器 Elements/Console | 能定位元素和事件目标 | 用 F12 观察表单值与点击目标，说明原生重置发生在哪里 | 已完成 |
+| 3-06 | Promise、`async/await`、`try/catch/finally` | 把一次模拟查询改为延迟返回并观察异常路径 | `src/views/demo/device-query.js` | 模拟成功和失败都能观察到调用顺序 | 错误能进入 `catch`，两条路径都执行 `finally` | 已完成 |
 
 ## 4 · Vue 3 基础与响应式
 
 | 编号 | 知识点 | 实操目标 | 涉及文件 | 预期效果 | 验收标准 | 状态 |
 | --- | --- | --- | --- | --- | --- | --- |
-| 4-01 | SFC、`template`、`<script setup>`、`<style scoped>`、`ref`、`v-model` | 将设备名称输入绑定到响应式值 | `src/views/demo/CustomPage.vue` | 输入时页面能回显设备名称 | 在脚本中说明 `.value`，在模板中指出自动解包 | 未开始 |
+| 4-01 | SFC、`template`、`<script setup>`、`<style scoped>`、`ref`、`v-model` | 将设备名称输入绑定到响应式值 | `src/views/demo/CustomPage.vue` | 输入时页面能回显设备名称 | 在脚本中说明 `.value`，在模板中指出自动解包 | 学习中 |
 | 4-02 | `v-for`、`:key`、`v-bind` | 把静态表格行改为根据数组渲染 | `src/views/demo/CustomPage.vue`、`device-data.js` | 数据条数决定实际行数 | 加一条记录后多一行，行键取稳定的设备编号 | 未开始 |
 | 4-03 | `@click`、`v-if`、`v-show` | 将查询按钮接到筛选函数并加空结果反馈 | `src/views/demo/CustomPage.vue`、`device-query.js` | 点击更新表格，无记录时出现提示 | 验证结果与提示，使用 Elements 比较节点移除与隐藏 | 未开始 |
 | 4-04 | `computed`、`watch`、`onMounted` | 显示派生数量，观察首次挂载与字段变化 | `src/views/demo/CustomPage.vue` | 记录数随结果更新，调试时可看到生命周期与侦听顺序 | 数量正确，能区分派生计算和副作用 | 未开始 |
