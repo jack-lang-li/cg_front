@@ -1,0 +1,13 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "启动并调试前端学习实验室",
+      "type": "msedge",
+      "request": "launch",
+      "url": "http://127.0.0.1:8080/",
+      "webRoot": "${workspaceFolder}",
+      "preLaunchTask": "启动 Webpack 开发服务"
+    }
+  ]
+}

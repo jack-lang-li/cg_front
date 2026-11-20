@@ -3,7 +3,10 @@
     <p class="stage">阶段 0 · 工程初始化</p>
     <h1>前端学习实验室</h1>
     <p class="intro">以设备缺陷管理为练习场景，逐步学习企业后台页面开发。</p>
-
+  <div class="device-section">
+      <h2>设备管理</h2>
+      <p>示例设备为<span>一号巡检泵</span>。</p>
+    </div>
     <p class="practice-count" aria-live="polite">练习计数：{{ practiceCount }}</p>
     <button type="button" @click="incrementPracticeCount">增加练习计数</button>
   </main>

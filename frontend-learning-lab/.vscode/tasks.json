@@ -1,0 +1,30 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "启动 Webpack 开发服务",
+      "type": "shell",
+      "command": "npm.cmd",
+      "args": ["run", "serve"],
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "isBackground": true,
+      "problemMatcher": {
+        "owner": "webpack",
+        "fileLocation": ["relative", "${workspaceFolder}"],
+        "pattern": {
+          "kind": "file",
+          "regexp": "^(ERROR in (\\./[^\\s?]+).*)$",
+          "file": 2,
+          "message": 1
+        },
+        "background": {
+          "activeOnStart": true,
+          "beginsPattern": "Project is running at:",
+          "endsPattern": "webpack .* compiled (successfully|with \\d+ warnings?)"
+        }
+      }
+    }
+  ]
+}
