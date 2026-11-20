@@ -3,11 +3,50 @@
     <p class="stage">阶段 0 · 工程初始化</p>
     <h1>前端学习实验室</h1>
     <p class="intro">以设备缺陷管理为练习场景，逐步学习企业后台页面开发。</p>
-  <div class="device-section">
+    <div class="device-section">
       <h2>设备管理</h2>
       <p>示例设备为<span>一号巡检泵</span>。</p>
+      <form @submit.prevent>
+        <div>
+          <label for="device-name">设备名称</label>
+          <input id="device-name" type="text" placeholder="请输入设备名称" />
+        </div>
+        <div>
+          <label for="device-status">设备状态</label>
+          <select id="device-status">
+            <option value="">全部状态</option>
+            <option value="running">运行中</option>
+            <option value="stopped">已停用</option>
+          </select>
+        </div>
+        <button type="submit">查询</button>
+        <button type="reset">重置</button>
+      </form>
+      <table>
+        <thead>
+          <tr>
+            <th scope="col">设备编号</th>
+            <th scope="col">设备名称</th>
+            <th scope="col">设备状态</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>EQ-001</td>
+            <td>一号巡检泵</td>
+            <td>运行中</td>
+          </tr>
+          <tr>
+            <td>EQ-002</td>
+            <td>二号巡检泵</td>
+            <td>已停用</td>
+          </tr>
+        </tbody>
+      </table>
     </div>
-    <p class="practice-count" aria-live="polite">练习计数：{{ practiceCount }}</p>
+    <p class="practice-count" aria-live="polite">
+      练习计数：{{ practiceCount }}
+    </p>
     <button type="button" @click="incrementPracticeCount">增加练习计数</button>
   </main>
 </template>

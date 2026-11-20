@@ -21,17 +21,17 @@
 
 | 编号 | 知识点 | 实操目标 | 涉及文件 | 预期效果 | 验收标准 | 状态 |
 | --- | --- | --- | --- | --- | --- | --- |
-| 1-01 | `h1`、`h2`、`div`、`span`、元素嵌套 | 在首页增加静态设备区标题和容器 | `src/views/demo/CustomPage.vue` 的 `<template>` | 实验室主标题下出现设备管理区 | 用 Elements 找到设备区及其父元素，标题层级清晰 | 学习中 |
-| 1-02 | `input`、`label`、`id`、`for`、`placeholder` | 加设备名称输入框 | `src/views/demo/CustomPage.vue` | 输入框可输入，标签说明含义 | 点击标签会聚焦输入框，输入后占位文字让出 | 未开始 |
-| 1-03 | `select`、`option`、`value` | 加状态下拉框 | `src/views/demo/CustomPage.vue` | 能展开并选择示例状态 | 能指出显示文本和选项值的区别 | 未开始 |
-| 1-04 | `form`、`button`、`type` | 把控件组织为查询表单，加查询与重置按钮 | `src/views/demo/CustomPage.vue` | 原生重置恢复初值，查询按钮作为静态占位 | 修改两个控件后点重置，初值恢复，点查询页面保持原位 | 未开始 |
-| 1-05 | `table`、`thead`、`tbody`、`tr`、`th`、`td` | 写表头和两行静态设备数据 | `src/views/demo/CustomPage.vue` | 字段按列对齐 | 自己增减一列，每行单元格数与表头一致 | 未开始 |
+| 1-01 | `h1`、`h2`、`div`、`span`、元素嵌套 | 在首页增加静态设备区标题和容器 | `src/views/demo/CustomPage.vue` 的 `<template>` | 实验室主标题下出现设备管理区 | 用 Elements 找到设备区及其父元素，标题层级清晰 | 待验证 |
+| 1-02 | `input`、`label`、`id`、`for`、`placeholder` | 加设备名称输入框 | `src/views/demo/CustomPage.vue` | 输入框可输入，标签说明含义 | 点击标签会聚焦输入框，输入后占位文字让出 | 待验证 |
+| 1-03 | `select`、`option`、`value` | 加状态下拉框 | `src/views/demo/CustomPage.vue` | 能展开并选择示例状态 | 能指出显示文本和选项值的区别 | 待验证 |
+| 1-04 | `form`、`button`、`type` | 把控件组织为查询表单，加查询与重置按钮 | `src/views/demo/CustomPage.vue` | 原生重置恢复初值，查询按钮作为静态占位 | 修改两个控件后点重置，初值恢复，点查询页面保持原位 | 待验证 |
+| 1-05 | `table`、`thead`、`tbody`、`tr`、`th`、`td` | 写表头和两行静态设备数据 | `src/views/demo/CustomPage.vue` | 字段按列对齐 | 自己增减一列，每行单元格数与表头一致 | 已完成 |
 
 ## 2 · CSS 样式与布局
 
 | 编号 | 知识点 | 实操目标 | 涉及文件 | 预期效果 | 验收标准 | 状态 |
 | --- | --- | --- | --- | --- | --- | --- |
-| 2-01 | 选择器、class、id、`scoped`、`background` | 给设备区设置局部容器样式 | `src/views/demo/CustomPage.vue` 的 `<style scoped>` | 设备区形成清晰内容边界 | 用 Elements 找到生效规则，实验室标题样式保持原效果 | 未开始 |
+| 2-01 | 选择器、class、id、`scoped`、`background` | 给设备区设置局部容器样式 | `src/views/demo/CustomPage.vue` 的 `<style scoped>` | 设备区形成清晰内容边界 | 用 Elements 找到生效规则，实验室标题样式保持原效果 | 学习中 |
 | 2-02 | 盒模型、宽高、`margin`、`padding`、`border` | 调整输入框尺寸和设备区内外间距 | `src/views/demo/CustomPage.vue` | 控件高度与间距统一 | 在 Computed 面板指出内容、内边距、边框和外边距 | 未开始 |
 | 2-03 | `display`、Flex、`gap`、`flex-wrap` | 横向排列查询条件与按钮 | `src/views/demo/CustomPage.vue` | 宽屏同排，变窄时可换行 | 缩窄视口，按钮仍可点击，表单没有横向溢出 | 未开始 |
 | 2-04 | 表格样式、`overflow-x` | 设置表头和单元格样式，并处理窄屏 | `src/views/demo/CustomPage.vue` | 表格横向滚动限制在容器内 | 在 360 像素视口能滚到最后一列 | 未开始 |
